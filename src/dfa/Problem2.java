@@ -20,9 +20,9 @@ public class Problem2 {
     }
 
     private void initProblem(BufferedWriter bw) throws IOException {
-        states = new int[]{0, 1, 2};
+        states = new int[]{0, 1, 2, 3};
         startState = new int[]{0};
-        finalState = new int[]{2};
+        finalState = new int[]{3};
         alphabet = new char[]{'0','1'};
         initTransitions();
         initDFA();
@@ -31,9 +31,10 @@ public class Problem2 {
 
     private void initTransitions(){
         transitionTable = Map.ofEntries(
-               entry(0, new int[]{0, 1}),
+               entry(0, new int[]{-1, 1}),
                entry(1, new int[]{2, 2}),
-               entry(2, new int[]{2, 2})
+               entry(2, new int[]{3, 3}),
+                entry(2, new int[]{3, 3})
         );
     }
     private void initDFA(){
