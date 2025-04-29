@@ -23,7 +23,7 @@ public class Problem2 {
         states = new int[]{0, 1, 2};
         startState = new int[]{0};
         finalState = new int[]{2};
-        alphabet = new char[]{'a','b'};
+        alphabet = new char[]{'0','1'};
         initTransitions();
         initDFA();
         bw.append("2").append("\n");
